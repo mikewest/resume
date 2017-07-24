@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
+  <style>
+    /* Mostly swiping colors from https://color.adobe.com/Quiet-Cry-color-theme-124171/?showPublished=true */
+    /* and https://color.adobe.com/Flat-UI-color-theme-2469224/?showPublished=true */
+    html {
+      background: #EEEFF7;
+    }
+
+    body {
+      margin: 1em auto;
+      width: 700px;
+
+      min-height: 10em;
+      border: 1px solid #1C1D21;
+    }
+
+    header {
+      background: #31353D;
+      margin: 0;
+      padding: 0.75em 1em;
+      text-align: right;
+    }
+      header h1 {
+        margin: 0 0 0.25em;
+        padding: 0;
+        color: #FFF;
+        font: 2.5em/1 'Oswald', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+      }
+      header a {
+        display: block;
+        margin: 0 0 0.25em;
+        padding: 0;
+        color: #92CDCF;
+        font: 0.9em/1 'Open Sans', sans-serif;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    section {
+      background: #FFF;
+      padding: 1em 1em 1em 2em;
+    }
+      section h2 {
+        margin: 0 0 0.25em -1em;
+        padding: 0;
+        color: #31353D;
+        font: 1.25em/1 'Oswald', sans-serif;
+        text-transform: uppercase;
+      }
+      section h3 {
+        color: #31353D;
+        font: 1.1em/1 'Oswald', sans-serif;
+        margin: 1em 0 0.25em 0;
+      }
+        h3 span {
+          color: #E74C3C;
+          text-transform: uppercase;
+        }
+        h3 + span {
+          font: 1em/1 'Oswald', sans-serif;
+          color: #31353D;
+        }
+      section p, section li {
+        font: 0.9em/1.2 'Open Sans', sans-serif;
+      }
+      section li {
+        margin: 0.3em 0;
+      }
+        section li li { font-size: 1em; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mike West</h1>
+    <a href="mailto:mike@mikewest.org">mike@mikewest.org</a>
+  </header>
+  <section>
+    <h2>Experience</h2>
+
+    <h3><span>Google</span>, Staff Software Engineer</h3>
+    <span><time datetime="2010-11">November 2010</time> &mdash; <i>Current</i></span>
+    <p>
+      I lead <a href="https://www.chromium.org/Home/chromium-security/owp">an arm of Chrome's
+      security team</a> that focuses on the platform the browser offers to web developers. We harden
+      the defaults to the extent possible, and create tools developers can use to lock their own
+      sites down even further. In that role, I've designed and implemented a number of mitigations
+      for XSS and CSRF; highlights in the "Specifications" section below.
+    </p>
+    <p>
+      I'm a core member of the Chromium development team, with more than 1,500 patches landed. I
+      own code throughout the project, and I'm a member of the small group of
+      <a href="https://chromium.googlesource.com/chromium/src/+/master/third_party/WebKit/API_OWNERS">API owners</a>,
+      tasked with determining what features we ship as part of the platform.
+    </p>
+
+    <h3><span>Süddeutsche Zeitung</span>, Senior Web Developer</h3>
+    <span><time datetime="2009-01">January 2009</time> &mdash; <time datetime="2010-11">November 2010</time></span>
+    <p>
+      I was responsible for the frontend of <a href="http://www.sueddeutsche.de/">sz.de</a>,
+      including a complete rebuild of the site's HTML, CSS, and JavaScript for a redesign in 2010.
+    </p>
+
+    <h3><span>Yahoo!</span>, Web Developer</h3>
+    <span><time datetime="2006-11">November 2006</time> &mdash; <time datetime="2008-12">December 2008</time></span>
+    <p>
+      I worked on a team responsible for bringing Yahoo! News to Europe, focused on porting the
+      US-specific framework to a multi-language market. Towards the end of my tenure, I was solely
+      responsible for maintenance of the sites' HTML, CSS, and JavaScript.
+    </p>
+
+    <h3><span>RightNow</span>, Application Engineer</h3>
+    <span><time datetime="2005-03">March 2005</time> &mdash; <time datetime="2006-01">January 2006</time></span>
+    <p>
+      I worked as a consultant to customize RightNow's CRM, and integrate it into existing backend
+      systems.
+    </p>
+
+    <h3><span>Dallas Airmotive</span>, Web Programmer</h3>
+    <span><time datetime="2003-08">August 2003</time> &mdash; <time datetime="2005-03">March 2005</time></span>
+    <p>
+      I worked on a small team responsible for a suite of PHP applications that allowed customers to
+      track their engines' repair status.
+    </p>
+  </section>
+  <section>
+    <h2>Education</h2>
+
+    <h3><span>University of Texas at Austin</span>, B.A. Philosphy</h3>
+    <span><time datetime="1998-09">September 1998</time> &mdash; <time datetime="2003-06">June 2003</time></span>
+  </section>
+  <section>
+    <h2>Specifications</h2>
+    <p>
+      I represent Google in the W3C's
+      <a href="https://www.w3.org/2011/webappsec/">Web Application Security working group</a>, and
+      I'm responsible for the design and implementation of a number of specifications (listed here
+      in approximate order of maturity/implementation):
+    </p>
+
+    <ul>
+      <li><a href="https://www.w3.org/TR/CSP2/">Content Security Policy Level 2</a> (with Adam Barth and Daniel Veditz)</li>
+      <li><a href="https://www.w3.org/TR/mixed-content/">Mixed Content</a></li>
+      <li><a href="https://www.w3.org/TR/secure-contexts/">Secure Contexts</a> (with Yan Zhu)</li>
+      <li><a href="https://www.w3.org/TR/upgrade-insecure-requests/">Upgrade Insecure Requests</a></li>
+      <li><a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a></li>
+      <li><a href="https://w3c.github.io/webappsec-csp/">Content Security Policy Level 3</a></li>
+      <li><a href="https://w3c.github.io/webappsec-clear-site-data/">Clear Site Data</a></li>
+      <li><a href="https://w3c.github.io/webappsec-csp/embedded/">Content Security Policy: Embedded Enforcement</a></li>
+      <li><a href="https://github.com/w3c/webappsec-subresource-integrity/blob/master/signature-based-restrictions-explainer.markdown">Signature-based Resource Loading Restrictions</a></li>
+      <li><a href="https://wicg.github.io/reporting/">Reporting API</a></li>
+      <li><a href="https://wicg.github.io/cors-rfc1918/">CORS and RFC1918</a></li>
+      <li><a href="https://wicg.github.io/origin-policy/">Origin Policy</a></li>
+    </ul>
+
+    <p>
+      These documents almost always involve deeper changes to the platform, reflected in my
+      contributions to WHATWG’s
+      <a href="https://github.com/whatwg/html/commits?author=mikewest">HTML</a> and
+      <a href="https://github.com/whatwg/fetch/commits?author=mikewest">Fetch</a> standards.
+    </p>
+
+    <p>
+      I also do a bit of related work in the <a href="http://httpwg.org/">IETF's HTTP working
+      group</a>, mostly related to cookies:
+    </p>
+
+    <ul>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc7762.txt">Initial Assignment for the Content Security Policy Directives Registry (RFC 7762)</a></li>
+      <li>
+        <a href="https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-01">RFC6265bis</a>
+        refreshes the cookies RFC by incorporating the following documents I'm responsible for:
+
+        <ul>
+          <li><a href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-alone-01">Deprecate modification of `secure` cookies from non-secure origins</a></li>
+          <li><a href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-prefixes-00">Cookie Prefixes</a></li>
+          <li><a href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00">Same-Site Cookies</a> (with Mark Goodwin)</li>
+        </ul>
+      </li>
+      <li><a href="https://tools.ietf.org/html/draft-west-cookie-priority-00">Cookie Priority (with Eric Wright and Samuel Huang)</a></li>
+      <li><a href="https://tools.ietf.org/html/draft-west-let-localhost-be-localhost-03">Let `localhost` be localhost</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Presentations</h2>
+    <ul>
+      <li>
+        BSides Munich, 2017:
+        "<a href="https://sites.google.com/view/bsidesmunich2017/agenda_1/mike-west">Hardening the Web Platform</a>"
+        (<a href="https://speakerdeck.com/mikewest/bsides-munich">Slides</a>,
+         <a href="https://www.youtube.com/watch?v=FsuaGQcEPvQ">Video</a>)
+      </li>
+      <li>AppSecEU, 2016: “Hardening the Web Platform”
+        (<a href="https://speakerdeck.com/mikewest/hardening-the-web-platform-appsec-eu-2016">Slides</a>,
+        <a href="https://www.youtube.com/watch?v=0qu9oFaHuY0">Video</a>)
+      </li>
+      <li>Google I/O, 2016: “Who are you, really?”
+        (<a href="https://youtu.be/MnvUlGFb3GQ?t=7m30s">Video</a>)
+      </li>
+      <li>dotSecurity, 2016:
+        “<a href="https://www.dotconferences.com/2016/05/mike-west-web-platform-security">Web Platform Security</a>”
+        (<a href="https://speakerdeck.com/mikewest/web-platform-security-dotsecurity-april-2016">Slides</a>,
+        <a href="https://www.youtube.com/watch?v=sgEv92XqdhM">Video</a>)
+      <li>HackerPraktikum, 2014: “User Agent Lockdown”
+        (<a href="https://speakerdeck.com/mikewest/user-agent-lockdown-hackpra-2014">Slides</a>,
+        <a href="https://www.youtube.com/watch?v=IytemPWpFqY">Video</a>)
+      <li>Devoxx, 2013: “No Privilege, no risk”
+        (<a href="https://speakerdeck.com/mikewest/no-privilege-no-risk-devoxx-2013">Slides</a>,
+        <a href="https://www.youtube.com/watch?v=AOAnfNd553E">Video</a>)
+      <li>GOTO Aarhus, 2013: “Web Platform: The Secure Parts”
+        (<a href="https://speakerdeck.com/mikewest/web-platform-the-secure-parts-goto-aarhus-2013">Slides</a>,
+        <a href="https://www.youtube.com/watch?v=Y4uuPEp0eTU">Video</a>)
+      <li>JSConf EU, 2013: “Towards a Post-XSS World”
+        (<a href="https://speakerdeck.com/mikewest/towards-a-post-xss-world-jsconf-eu-2013">Slides</a>,
+        <a href="https://www.youtube.com/watch?v=9n7qdcCbsu4">Video</a>)
+      <li>CSSConf EU, 2013: “XSS (No, the _other_ ‘s’)”
+        (<a href="https://speakerdeck.com/mikewest/xss-no-the-other-s-cssconf-eu-2013">Slides</a>,
+        <a href="https://www.youtube.com/watch?v=eb3suf4REyI">Video</a>)
+      <li>Frontend Conf Zurich, 2013: “Frontend Security”
+        (<a href="https://speakerdeck.com/mikewest/frontend-security-frontend-conf-zurich-2013-08-30">Slides</a>,
+        <a href="https://www.youtube.com/watch?v=fYjO5pIY1mY">Video</a>)
+      <li>jQuery Europe, 2013: “Mitigating Maliciousness”
+        (<a href="https://speakerdeck.com/mikewest/mitigating-maliciousness-jquery-europe-2013">Slides</a>)
+      <li>Devoxx 2012: “Securing the Client Side”
+        (<a href="https://speakerdeck.com/mikewest/securing-the-client-side-devoxx-2012">Slides</a>,
+        <a href="https://www.youtube.com/watch?v=o42wL8Mq7qQ">Video</a>)
+      <li>Google I/O, 2012: “What’s Next for Chrome Extensions”
+        (<a href="https://www.youtube.com/watch?v=x9KOS1VQgqQ">Video</a>)
+    </ul>
+</body>
+</html>
