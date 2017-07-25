@@ -45,6 +45,9 @@
       background: #FFF;
       padding: 1em 1em 1em 2em;
     }
+      section a {
+        color: #445878;
+      }
       section h2 {
         margin: 0 0 0.25em -1em;
         padding: 0;
@@ -72,6 +75,42 @@
         margin: 0.3em 0;
       }
         section li li { font-size: 1em; }
+
+    @media print {
+      html, body {
+        margin: 0 0 0 0;
+        padding: 0;
+        border: 0;
+        max-width: none;
+      }
+
+      header {
+        background: #FFF;
+        text-align: left;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+        header h1 {
+          color: #222;
+        }
+
+      section a {
+        text-decoration: none;
+      }
+        section a:after {
+          content: " <" attr(href) "> ";
+          font-size: 90%;
+          word-wrap: break-word;
+        }
+
+      #specs, #presentations {
+        page-break-before: always;
+      }
+      #experience, #specs, #presentations {
+        margin-top: 5.5em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -79,7 +118,7 @@
     <h1>Mike West</h1>
     <a href="mailto:mike@mikewest.org">mike@mikewest.org</a>
   </header>
-  <section>
+  <section id="experience">
     <h2>Experience</h2>
 
     <h3><span>Google</span>, Staff Software Engineer</h3>
@@ -92,8 +131,9 @@
       for XSS and CSRF; highlights in the "Specifications" section below.
     </p>
     <p>
-      I'm a core member of the Chromium development team, with more than 1,500 patches landed. I
-      own code throughout the project, and I'm a member of the small group of
+      I'm a core member of the Chromium development team, with more than 1,500 patches landed
+      (mostly written in C++). I own code throughout the project, and I'm a member of the small
+      group of
       <a href="https://chromium.googlesource.com/chromium/src/+/master/third_party/WebKit/API_OWNERS">API owners</a>,
       tasked with determining what features we ship as part of the platform.
     </p>
@@ -101,8 +141,9 @@
     <h3><span>Süddeutsche Zeitung</span>, Senior Web Developer</h3>
     <span><time datetime="2009-01">January 2009</time> &mdash; <time datetime="2010-11">November 2010</time></span>
     <p>
-      I was responsible for the frontend of <a href="http://www.sueddeutsche.de/">sz.de</a>,
-      including a complete rebuild of the site's HTML, CSS, and JavaScript for a redesign in 2010.
+      I was responsible for the frontend of <a href="http://www.sueddeutsche.de/">one of the largest
+      German daily newspapers</a>, including a complete rebuild of the site's HTML, CSS, and
+      JavaScript for a redesign in 2010.
     </p>
 
     <h3><span>Yahoo!</span>, Web Developer</h3>
@@ -133,7 +174,7 @@
     <h3><span>University of Texas at Austin</span>, B.A. Philosphy</h3>
     <span><time datetime="1998-09">September 1998</time> &mdash; <time datetime="2003-06">June 2003</time></span>
   </section>
-  <section>
+  <section id="specs">
     <h2>Specifications</h2>
     <p>
       I represent Google in the W3C's
@@ -185,12 +226,12 @@
       <li><a href="https://tools.ietf.org/html/draft-west-let-localhost-be-localhost-03">Let `localhost` be localhost</a></li>
     </ul>
   </section>
-  <section>
+  <section id="presentations">
     <h2>Presentations</h2>
     <ul>
       <li>
         BSides Munich, 2017:
-        "<a href="https://sites.google.com/view/bsidesmunich2017/agenda_1/mike-west">Hardening the Web Platform</a>"
+        "Hardening the Web Platform"
         (<a href="https://speakerdeck.com/mikewest/bsides-munich">Slides</a>,
          <a href="https://www.youtube.com/watch?v=FsuaGQcEPvQ">Video</a>)
       </li>
@@ -202,7 +243,7 @@
         (<a href="https://youtu.be/MnvUlGFb3GQ?t=7m30s">Video</a>)
       </li>
       <li>dotSecurity, 2016:
-        “<a href="https://www.dotconferences.com/2016/05/mike-west-web-platform-security">Web Platform Security</a>”
+        “Web Platform Security”
         (<a href="https://speakerdeck.com/mikewest/web-platform-security-dotsecurity-april-2016">Slides</a>,
         <a href="https://www.youtube.com/watch?v=sgEv92XqdhM">Video</a>)
       <li>HackerPraktikum, 2014: “User Agent Lockdown”
